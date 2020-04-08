@@ -2,12 +2,12 @@ import '@babel/polyfill'
 import React from 'react';
 import { render } from 'react-dom'
 
-import './index.css';
+import './index.scss';
 
 function App() {
   return (
     <div class="app">
-      <p>My App</p>
+      <p class="header">My App</p>
     </div>
   );
 }
