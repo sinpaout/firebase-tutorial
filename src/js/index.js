@@ -2,7 +2,7 @@ import '@babel/polyfill'
 import React from 'react';
 import { render } from 'react-dom'
 
-import data from '../../assets/data.yml'
+import data from 'data.yml'
 
 import './index.scss';
 

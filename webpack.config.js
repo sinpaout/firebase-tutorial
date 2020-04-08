@@ -91,8 +91,8 @@ module.exports = (env = {}, argv) => {
     },
     plugins: plugins,
     resolve: {
-      extensions: ['.js'],
-      modules: ['node_modules', dir.src],
+      extensions: ['.js', '.yml', '.yaml'],
+      modules: ['node_modules', dir.src, dir.assets],
     },
     devServer: {
       contentBase: dir.build,
