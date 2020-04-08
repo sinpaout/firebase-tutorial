@@ -22,6 +22,8 @@ const dir = {
 
 module.exports = (env = {}, argv) => {
   const isProd = argv.mode === 'production'
+  const outputPath = dir.build
+
   plugins.push(
     new webpack.EnvironmentPlugin({
       NODE_ENV: argv.mode,
@@ -56,6 +58,7 @@ module.exports = (env = {}, argv) => {
     entry,
     output: {
       filename: '[name]-[contenthash].js',
+      path: outputPath,
       publicPath: '/'
     },
     module: {
