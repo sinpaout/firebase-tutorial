@@ -79,7 +79,14 @@ module.exports = (env = {}, argv) => {
             },
           ],
         },
-
+        {
+          test: /\.(ya?ml)$/i,
+          use: [{
+            loader: 'json-loader'
+          }, {
+            loader: 'yaml-loader'
+          }]
+        },
       ]
     },
     plugins: plugins,
