@@ -18,6 +18,8 @@ function App() {
       <ul>
         {Items}
       </ul>
+      api
+      <p>{process.env.API_BASE_URL}</p>
     </div>
   );
 }

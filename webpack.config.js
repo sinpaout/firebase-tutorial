@@ -21,9 +21,17 @@ const dir = {
 }
 
 module.exports = (env = {}, argv) => {
+  const isProd = argv.mode === 'production'
   plugins.push(
     new webpack.EnvironmentPlugin({
       NODE_ENV: argv.mode,
+    })
+  )
+
+  plugins.push(
+    new Dotenv({
+      path: isProd ? '.env.production' : '.env',
+      safe: true,
     })
   )
 
