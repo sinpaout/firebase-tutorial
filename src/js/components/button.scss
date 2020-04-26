@@ -1,0 +1,9 @@
+:local(.class) {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #dfdfdf;
+
+  &:disabled {
+    opacity: .5;
+  }
+}

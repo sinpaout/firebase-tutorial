@@ -84,9 +84,24 @@ module.exports = (env = {}, argv) => {
             },
             {
               loader: 'css-loader',
+              options: {
+                modules: {
+                  mode: 'global',
+                  localIdentName: '[folder]-[name]-[hash:base64:6]',
+                },
+                localsConvention: 'camelCase',
+                url: false,
+                sourceMap: false,
+              },
             },
             {
               loader: 'sass-loader',
+              options: {
+                sassOptions: {
+                  sourceMap: true,
+                  includePaths: [dir.css],
+                },
+              },
             },
           ],
         },
